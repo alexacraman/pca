@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="max-w-7xl mx-auto">
+    
+    <div class=" pt-24">
+        <h2 class="text-3xl font-bold tracki text-center sm:text-5xl text-gray-50 bg-blue-700 p-6 rounded my-6 mx-8">Committee Members</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2">
+            <div class="col-span-1 leftMargin">
+                
+            </div>
+            <div class="col-span-1">
+    
+            </div>
+        </div>
+    
+    </div>
+    <div class="right-margin">
+       
+    </div>
+</div>
+<!-- <script>
+document.addEventListener('DOMContentLoaded',  ()=> {
+const leftMargin = document.querySelector('.leftMargin')
+   async function get_members(){
+    const url_ = '/accounts/get_json_team/'
+    try{
+        const response = await fetch(url_)
+        const data     = await response.json()
+        const info = JSON.parse(data.data)
+        
+        info.forEach((element) => {
+            const name = element.Name;
+            const pos = element.Position;
+            const description = element.Description;
+            const image = element.Image;
+            const html_ = `<h1>${name}</h1>
+                <p>${pos}</p>
+                <p>${description}</p>
+                <img src="${image}">`
+            leftMargin.insertAdjacentHTML('afterbegin', html_)
+        });
+        
+        
+    }catch(error){
+        console.error('There was an error', error)
+    }
+   }
+get_members();
+  
+});
+</script> -->
+
+{% endblock %}

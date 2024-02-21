@@ -1,0 +1,101 @@
+[
+{
+    "model": "pdf.pdfdocument",
+    "pk": 4,
+    "fields": {
+        "title": "Accredited Training",
+        "pdf_file": "pdfs/Accredited-Training-and-Professional-Roles-in-CE-PCA-Publication.pdf",
+        "updated": "2023-10-19T12:26:30.349Z"
+    }
+},
+{
+    "model": "pdf.pdfdocument",
+    "pk": 5,
+    "fields": {
+        "title": "Professional Standards",
+        "pdf_file": "pdfs/CEPEG_Standards_Document_2017.pdf",
+        "updated": "2023-10-19T12:26:30.349Z"
+    }
+},
+{
+    "model": "pdf.pdfdocument",
+    "pk": 6,
+    "fields": {
+        "title": "A Guide to Navigating the EHCP & Assessment Process.",
+        "pdf_file": "pdfs/EHCP-Guidance-Document-PCA-Publications.pdf",
+        "updated": "2023-10-19T12:26:44.586Z"
+    }
+},
+{
+    "model": "pdf.pdfdocument",
+    "pk": 7,
+    "fields": {
+        "title": "Guide for Independent Conductors",
+        "pdf_file": "pdfs/Guide-for-Independent-Conductors-PCA-Publications.pdf",
+        "updated": "2023-10-19T12:26:30.349Z"
+    }
+},
+{
+    "model": "pdf.pdfdocument",
+    "pk": 8,
+    "fields": {
+        "title": "Moving and Handling in Conductive Education",
+        "pdf_file": "pdfs/Moving-and-Handling-in-Conductive-Education.pdf",
+        "updated": "2023-10-19T12:26:30.349Z"
+    }
+},
+{
+    "model": "pdf.pdfdocument",
+    "pk": 9,
+    "fields": {
+        "title": "PCA code of practice",
+        "pdf_file": "pdfs/PCA_code_of_practice.pdf",
+        "updated": "2023-10-19T12:26:30.349Z"
+    }
+},
+{
+    "model": "pdf.pdfdocument",
+    "pk": 10,
+    "fields": {
+        "title": "PCA continuing professional development",
+        "pdf_file": "pdfs/PCA_continual_professional_development.pdf",
+        "updated": "2023-10-19T12:26:30.349Z"
+    }
+},
+{
+    "model": "pdf.pdfdocument",
+    "pk": 11,
+    "fields": {
+        "title": "PCA working with a team",
+        "pdf_file": "pdfs/PCA_working_within_a_team.pdf",
+        "updated": "2023-10-19T12:26:30.349Z"
+    }
+},
+{
+    "model": "pdf.pdfdocument",
+    "pk": 12,
+    "fields": {
+        "title": "What is Conductive Education",
+        "pdf_file": "pdfs/What-is-Conductive-Education.pdf",
+        "updated": "2023-10-19T12:26:30.349Z"
+    }
+},
+{
+    "model": "pdf.pdfdocument",
+    "pk": 13,
+    "fields": {
+        "title": "Fitness to Practice",
+        "pdf_file": "pdfs/Fitness-to-Practice-CE-PCA-Publications.pdf",
+        "updated": "2023-10-19T12:26:30.349Z"
+    }
+},
+{
+    "model": "pdf.pdfdocument",
+    "pk": 14,
+    "fields": {
+        "title": "PCA Covid Response",
+        "pdf_file": "pdfs/PCA--response-to-COVID-19.pdf",
+        "updated": "2023-10-19T12:26:30.349Z"
+    }
+}
+]

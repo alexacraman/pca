@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="max-w-sm sm:max-w-7xl mx-auto my-24 p-6">
+    <div class="relative w-1/2 mx-auto text-xl text-center p-4 text-white rounded-lg bg-slate-700">You searched for {{ query }}</div>
+    <div class="grid grid-col-1 sm:grid-cols-3">
+        {% for result in combined_results %}
+        <div class="max-w-xs m-6 col-span-1 rounded-md shadow-lg bg-white text-gray-800">
+            {% if result.image %}
+            <img src="{{ result.image.url }}" alt="{{ result.title}}" class="object-cover object-center w-full rounded-t-md  bg-gray-800">
+            {% endif %}
+            <div class="flex flex-col justify-between p-6 space-y-8">
+                <div class="space-y-2">
+                    <h2 class="text-3xl font-semibold tracki">{{ result.title }}</h2>
+                    <h2 class="text-3xl font-semibold tracki">{{ result.name }}</h2>
+                    <p >{{ result.description|truncatewords:'15' }}</p>
+                </div>
+                {% if result.get_absolute_url %}
+                <a type="submit" class="mx-auto lg:mx-0 hover:bg-gradient-to-r hover:from-blue-900 hover:to-blue-500 bg-gradient-to-r from-blue-500 to-blue-900 text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg text-center" href="{{ result.get_absolute_url }}">More</a>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+        
+{% endblock %}

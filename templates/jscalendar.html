@@ -1,0 +1,58 @@
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'dayGridMonth',
+      headerToolbar: {
+    left: 'prev,next today myCustomButton',
+    center: 'title',
+    right: 'dayGridMonth,timeGridWeek,timeGridDay'
+  }
+    });
+    calendar.render();
+    getBookings(calendar);
+  });
+
+  async function getBookings(calendar) {
+    try {
+      const response = await fetch('/booking/get_bookings/');
+      const data     = await response.json();
+      const bookings = JSON.parse(data.Bookings)
+      bookings.forEach(eventData => {
+        calendar.addEvent({
+          start: eventData.request_date, // Use the fields property to access the data
+          title: eventData.customer_name + eventData.destination, // Adjust this based on your event data structure
+          url:   eventData.url,
+          
+          
+        });
+      });
+    } catch (error) {
+      console.error('There was an error', error);
+    }
+  }
+</script>
+<div id='calendar'></div>
+
+
+# def get_bookings(request):
+#     try:
+#         bookings = Book.objects.all()
+#         serialized_data = [
+#             {
+#                 'request_date': booking.request_date.isoformat(),
+#                 'customer_name': booking.customer.first_name+booking.customer.last_name,
+#                 'destination': booking.places.name,
+#                 'url':booking.get_absolute_url(),
+#             }
+#             for booking in bookings
+#         ]
+
+#         # Serialize the custom data structure to JSON
+#         data = json.dumps(serialized_data)
+        
+#         return JsonResponse({'Bookings': data})
+#     except Book.DoesNotExist:
+#         return JsonResponse({'error': 'NO bookings'})
+# path('get_bookings/', get_bookings, name='get_bookings'),

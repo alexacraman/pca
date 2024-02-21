@@ -1,0 +1,72 @@
+[
+{
+    "model": "accounts.committeemembers",
+    "pk": 1,
+    "fields": {
+        "member_name": "Mel Brown",
+        "position": "Chair",
+        "description": "In 1987, Mel was one of the first UK teachers to go to Hungary to train as a conductor. From 1990, she began to specialise in older children and adults and her practical experience remains in this area. In 1997 she helped develop the first BA Hons in CE in the UK and supported the development of a broad training portfolio to help secure CE provision in the UK. In 2001 she completed her PhD in the field of CE and Parkinson's. Mel was a founding member of CEPEG in 2005, PCA in 2008 and the CE Consortium in 2016. Throughout her career she has worked to unify CE across the UK via conductors and centres. Mel has remained at NICE throughout her career in a range of roles including conductor, lecturer and from 2014 – 2022 CEO. She is now working part-time with her main focus being Level 4 Conductor Assistant Training, remote adult work with Parkinson’s and promoting adult CE.",
+        "image": "img/committee/Mel.jpeg"
+    }
+},
+{
+    "model": "accounts.committeemembers",
+    "pk": 2,
+    "fields": {
+        "member_name": "Lizzie Bell",
+        "position": null,
+        "description": "Lizzie trained at Keele university, graduating as a Conductor-Teacher in 2022, she then began her career at Ingfield Manor School in West Sussex. Lizzie stayed at Ingfield for 17 years working as a teacher-conductor across the primary and secondary age groups, as well as being a member of SLT. From Ingfield, Lizzie move to Sheffield to take on the Deputy Head role and to teach in the Early Years department at Paces School for Conductive Education. Having loved her time at Ingfield, she now thoroughly enjoys working with the children and staff at Paces. For the last 6 years Lizzie has delivered the Conductor Assistant training to staff at Ingfield and Paces- a role she is particularly fond of. Lizzie has also supported many trainee conductors over the years as a practice tutor. In October 2021 she completed her MA in Conductive Education, researching the CE parent and child group for her dissertation. Over the years she has presented at several of the PCA annual conferences on a variety of subjects. Lizzie is delighted to be a member of the PCA committee alongside her conductor colleagues and is excited about the opportunities this presents to further support and promote conductors in their professional role.",
+        "image": "img/committee/LizzieBell.jpeg"
+    }
+},
+{
+    "model": "accounts.committeemembers",
+    "pk": 3,
+    "fields": {
+        "member_name": "Erika Juhasz",
+        "position": null,
+        "description": "Erika qualified as a Conductor-Teacher in the Peto Institute in Budapest in 2001 and she started working in the UK in 2002. Erika discovered her passion for working with parents and children together and the importance of enhancing the children’s learning via supporting their parents or main carers. Erika worked in Rutland House School for Parents in Nottingham before she joined the team at PACE Centre working predominantly in Parent and Child services, before returning to Nottingham where she is currently Head of Service in Footprints Conductive Education Centre. Erika is keen on expanding her knowledge in the field of CE, promoting networking opportunities between CE settings within the UK, which was one of reasons for joining the PCA Committee in 2016",
+        "image": "img/committee/Erika_vY7LIEv.jpeg"
+    }
+},
+{
+    "model": "accounts.committeemembers",
+    "pk": 4,
+    "fields": {
+        "member_name": "Theresa Kinnersley",
+        "position": null,
+        "description": "Theresa qualified as a graduate nurse in 1986. She then moved to Oxford where she worked in theatres, neurology and then neuro-rehabilitation. Theresa gained management and teaching experience, and completed a Masters, however by then felt she needed a change of direction. Finally in 2002 Theresa came across an advert for conductor training and so moved to Birmingham. Once qualified she worked in the adults department and then in 2013 she joined the training team. Theresa is currently the UG programme director, although she is involved in both under- and post-graduate training. Theresa is currently completing a PhD, the focus of which is exploring conductors’ perceptions of expertise, and the creation of a CPD tool. She has been a member of the PCA committee since its beginning in 2007.",
+        "image": "img/committee/Theresa-Kinnersly.jpeg"
+    }
+},
+{
+    "model": "accounts.committeemembers",
+    "pk": 5,
+    "fields": {
+        "member_name": "Kinga Kondor",
+        "position": null,
+        "description": "Kinga trained as a Conductor- Nursery Teacher at the Pető Institute in Hungary in 2016 and moved out to the UK the same year. She has been working in early years settings as she strongly believes in the impact of early intervention, and finds it fulfilling to support families at the beginning of their journeys. Currently, she is practising Conductive Education at Small Steps as part of an amazing, interdisciplinary practitioner team whilst acquiring her Master’s degree at UCL in Physical Therapy in Musculoskeletal Healthcare. She is determined to conduct more research on the influence of CE and believes that PCA is a supportive platform to move Conductive Education forward.",
+        "image": "img/committee/kinga-kondor.jpeg"
+    }
+},
+{
+    "model": "accounts.committeemembers",
+    "pk": 6,
+    "fields": {
+        "member_name": "Jules McDonlad",
+        "position": null,
+        "description": "Connections Neuro Services (Independent Services that I set up myself in 2019)\r\nI have two areas of particular interest. I am passionate about CE for individuals with profound and multiple disabilities and how both the methodology and philosophy can be applied in this area. I am also a qualified Neuro-Linguistic Programming Practitioner and am exploring how this can be used within or around CE to benefit the psychological wellbeing of our participants. I have been in the PCA for a number of years and very much enjoy the role that PCA plays in the groundwork and foundations of CE. The framework that PCA offers to conductors in supporting conductors to develop within best-practice, working safely and to the best of their abilities is so important. I also value PCAs role in creating a network of conductors and being the voice of it’s members to support them in their daily practice.",
+        "image": "img/committee/Jules-McDonlad.jpeg"
+    }
+},
+{
+    "model": "accounts.committeemembers",
+    "pk": 7,
+    "fields": {
+        "member_name": "Josie Reeder",
+        "position": null,
+        "description": "Josie finished her conductor training in 2001 and commenced employment at the Pace Centre in September of that year. In the up-coming academic year she will be working across 2 'core' groups, as well as having an 'over-seeing' role; supporting the other conductors in the centre and positively influencing CE practice across our nursery/primary services. Within her career she has gained experience in training; both on a practical and theoretical level and am a member of the 'Training Team' at the centre, which consists of a range of professionals. Josie is currently doing her Masters in CE and finding that studying the field at this level is reigniting her passion and commitment to the CE approach! She hopes that this passion will transcend to the professionals she works with in the Transdisciplinary Team and help them to truly see the positive influence of CE as an educational approach for the students.",
+        "image": "img/committee/Josie-Reeder.jpeg"
+    }
+}
+]

@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="max-w-sm sm:max-w-7xl mx-auto my-24">
+
+    <div class="flex items-center justify-center">
+       
+        <h4 class="text-3xl font-bold tracki text-center sm:text-5xl text-gray-50  my-6 mx-8">Training and Events</h4>
+    </div>
+   
+    
+    <div class="grid sm:grid-cols-3 ">
+    {% for event in events %}
+
+    <div class="max-w-sm rounded overflow-hidden shadow-md shadow-white border-4 border-gray-500 bg-gray-50 text-slate-900 m-4 relative">
+        
+        <img class="w-full imgHolder border-2 border-gray-400 " src="" alt="Sunset in the mountains">
+        <!-- <p class="flex absolute inset-0 justify-center mt-12 " > 
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+            </svg>{{ event.start_date|date:'t N' }} 
+        </p> -->
+    
+        <div class="px-6 py-4">
+                <div class="font-bold text-2xl mb-2 text-center">{{ event.title}}</div>
+                <p class="text-gray-500">
+                    {{ event.description|truncatewords:5 }}
+                </p>
+                <div class="flex items-center  my-6 text-gray-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+                        </svg>
+                        {{ event.start_date.date }}   
+                </div>
+                <div class="flex items-center  my-6 text-gray-600">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+                  </svg>
+                 {{ event.end_date.date }}
+              
+            
+                
+            </div>
+                <div class="flex items-center my-6 text-gray-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                    </svg>{{ event.location }}
+                </div>
+                <div class="flex items-center  mt-2 text-gray-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M14.121 7.629A3 3 0 0 0 9.017 9.43c-.023.212-.002.425.028.636l.506 3.541a4.5 4.5 0 0 1-.43 2.65L9 16.5l1.539-.513a2.25 2.25 0 0 1 1.422 0l.655.218a2.25 2.25 0 0 0 1.718-.122L15 15.75M8.25 12H12m9 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                      </svg>
+                      
+                    {{ event.cost }}
+                </div>
+
+        </div>
+
+        <div class="flex justify-around">
+            <a  href='{{ event.get_absolute_url }}' class="mx-auto lg:mx-0 hover:bg-gradient-to-r hover:from-red-900 hover:to-red-500 bg-gradient-to-r from-red-500 to-red-900 text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg">More Info</a>
+            <!-- <a  href='{{ event.url_link }}' class="mx-auto lg:mx-0 hover:underline bg-gradient-to-r from-blue-500 to-blue-900 text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg">Register</a> -->
+        </div>
+
+        <div class="px-6 pt-4 pb-2 flex items-center justify-between">
+            {% if event.views %}
+            <p class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                  </svg>{{ event.views}}
+            </p>
+            
+              {% else %}
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88" />
+              </svg>
+              {% endif %}
+              <p class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#{{ event.event_type|default:'Conference' }}</p>
+
+          </div>
+      </div>
+    {% endfor %}
+</div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        const imgHolders = document.querySelectorAll('.imgHolder')
+        const imgPath = "https://picsum.photos/300/200/"
+        const randImg = (img) =>{
+            return `${img}?random=${Math.random()}`;
+        }
+        const imgGen = () =>{
+            imgHolders.forEach((img)=>{
+                img.setAttribute('class', 'grayscale w-full')
+               img.src = randImg(imgPath)
+            })
+        }
+        imgGen()
+       
+    })
+
+// const w = () =>{
+//     const body = document.getElementsByTagName('body')
+    
+//     const h1 = document.getElementsByTagName('h1')[0]
+//     const logoId = document.getElementsByTagName('p')[0]
+//     document.getElementsByTagName('p')[1].style.display = 'none'
+//     h1.style.display = 'flex'
+//     h1.style.justifyContent="center"
+//     h1.textContent = 'Image Generator'
+//     const imgPath = '<img id="imgId" src="https://picsum.photos/550/350/">'
+//     logoId.innerHTML = imgPath
+//     }
+// setInterval(() => {
+//     w()
+// }, 2000);
+
+ </script>
+{% endblock %}

@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="max-w-sm sm:max-w-2xl mx-auto my-24 ">
+  <h2 class="p-6 text-center text-2xl my-6">Venue Create</h2>
+    <section class="sm:p-8 ">
+
+    <div>
+      <form method="POST" id="form" >
+        {% csrf_token %}
+        {{ form.as_div }}
+
+        <div class="flex justify-center my-12" id="submitBtnContainer">
+          <button type="submit" class="py-2 px-6 border rounded-lg hover:rounded-none" id="submitBtn">Create</button>
+        </div>
+        
+      </form>
+    </div>
+</section>
+</div>
+
+<script>
+  //DOM queries
+    const form      = document.querySelector('form'); 
+    const submitBtn = document.querySelector('#submitBtnContainer');
+    const lat       = document.querySelector('#id_latitude');
+    const long      = document.querySelector('#id_longitude');
+    const address   = document.querySelector('#id_address');
+
+  // prevent default function on form
+  form.addEventListener('submit', (event)=>{
+    event.preventDefault()
+  })
+
+  // Event delegation
+  form.addEventListener('click', (event)=>{
+          const target = event.target
+          if(target.matches('[alert-close]')){
+            const errorAlertInDOM = target.closest('[alert]')
+            if(errorAlertInDOM){
+              errorAlertInDOM.remove()
+              errorAlertInDOM.style.display = 'none'
+              postcode.value = ''
+            }
+          }
+        })
+
+  // hide latitude and longitude from ModelForm
+  lat.classList.add('hidden')
+  lat.parentElement.classList.add('hidden')
+  long.classList.add('hidden')
+  long.parentElement.classList.add('hidden')
+  // create postcode element to auto fill the lat and long inputs
+    const label = document.createElement('label');
+    label.textContent = 'Postcode:';
+    label.setAttribute('for', 'postcode');
+
+    const postcode = document.createElement('input');
+    postcode.setAttribute('class', 'p-1 rounded-lg w-full my-2 text-gray-700');
+    postcode.setAttribute('type', 'text'); 
+    submitBtn.insertAdjacentElement('beforebegin', label)
+    submitBtn.insertAdjacentElement('beforebegin', postcode)
+    
+  // postcode event
+  postcode.addEventListener('change', (event)=>{
+    getLatLong(event.target.value)
+  })
+  async function getLatLong(postcode){
+    const url = `https://postcodes.io/postcodes/${postcode}`;
+    try{
+      const response = await fetch(url)
+      const data = await response.json()
+      if(response.status === 200){
+        const latitude  = data.result.latitude
+        const longitude = data.result.longitude
+        if(latitude && longitude){
+          lat.value = latitude
+          long.value = longitude
+        }       
+      }else{
+        const errorAlert = `<div alert class="relative p-4 pr-12 mb-4 text-white border border-red-300 border-solid rounded-lg bg-gradient-to-tl from-red-600 to-rose-400">
+                                There was an error with the postcode. Please try again.
+                                <button type="button" alert-close class="box-content absolute top-0 right-0 p-4 text-sm text-white bg-transparent border-0 rounded w-4 h-4 z-2">
+                                  <span aria-hidden="true" class="text-center cursor-pointer">&#10005;</span>
+                                </button>
+                              </div>`
+        const errorDiv = document.createElement('div')
+        errorDiv.innerHTML = errorAlert
+        form.appendChild(errorDiv)
+      }
+    }catch(error){
+      console.error('There is an error', error)
+    }
+  }
+</script>
+
+{% endblock %}

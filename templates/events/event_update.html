@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="max-w-sm sm:max-w-md mx-auto rounded overflow-hidden shadow-lg bg-white text-slate-900 m-4 ">
+   <div class="mx-auto lg:mx-0 hover:bg-gradient-to-r hover:from-blue-900 hover:to-blue-500 bg-gradient-to-r from-blue-500 to-blue-900 text-white font-bold  my-6 py-4 px-8 shadow-lg">
+    <form  method="POST">
+        {% csrf_token %}
+        {{ form.as_div }}
+        <div class="flex">
+            <input type="submit">
+        </div>
+    </form>
+   </div>
+    
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded',()=>{
+
+     //DOM queries
+    const form      = document.querySelector('form'); 
+    const inputEls  = form.querySelectorAll('input');
+    const textArea  = form.querySelectorAll('textarea');
+    const start       = document.querySelector('#id_start_date');
+    const end      = document.querySelector('#id_end_date');
+    start.setAttribute('type', 'datetime-local')
+    end.setAttribute('type', 'datetime-local')
+    // Styles
+    inputEls.forEach((el)=>{
+        el.setAttribute('class', 'p-4 rounded-lg w-full my-6 text-gray-700 border')
+    });
+    textArea.forEach((box)=>{
+      box.setAttribute('class', 'p-4 rounded-lg w-full my-6 text-gray-700 border')
+    });
+
+})
+</script>
+{% endblock %}

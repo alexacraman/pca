@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+<section class="max-w-7xl mx-auto my-24 ">
+    <h4 class="text-3xl font-bold tracki text-center sm:text-5xl text-gray-50  my-6 mx-8">Find a Conductive Education provider</h4>
+   
+<div class="flex justify-center my-6 ">
+    <button id="show-map-view" class="bg-blue-700 text-white p-2 rounded border cursor-pointer mr-1"><svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-map w-6 h-6 inline" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103zM10 1.91l-4-.8v12.98l4 .8V1.91zm1 12.98 4-.8V1.11l-4 .8v12.98zm-6-.8V1.11l-4 .8v12.98l4-.8z"/>
+      </svg></button>
+    <button id="show-list-view" class="bg-blue-700 text-white p-2 rounded border cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-card-list h-6 w-6 inline" viewBox="0 0 16 16">
+        <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+        <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+      </svg>
+    </button>
+</div>
+    
+
+<div id="map-view" class="mt-12">
+    <div id="map" style="height: 400px;" class="w-3/4 mx-auto border-4 border-blue-900 shadow-lg shadow-gray-600"></div>
+</div>
+
+<div  id="card-view"class="grid grid-cols-1 sm:grid-cols-3 px-12 py-8 " >
+  
+    {% for venue in venues %}
+   
+    <div  class="col-span-1 max-w-sm border-4 rounded my-6 bg-white text-gray-600" >
+
+	<div class="flex flex-col justify-between p-6 space-y-8 ">
+		<div class="space-y-2">
+			<h2 class="text-3xl font-bold text-center">{{ venue.name }}</h2>
+			<p class="dark:text-gray-100">{{ venue.description|truncatewords:20 }}</p>
+		</div>
+        <div class="space-y-4">
+            <p class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6 mr-2 sm:mr-6">
+                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                </svg>
+                <span>{{ venue.address }}</span>
+            </p>
+            <p class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 mr-2 sm:mr-6">
+                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                </svg>
+                <span>{{ venue.phone }}</span>
+            </p>
+            <p class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 mr-2 sm:mr-6">
+                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                </svg>
+                <span class="overflow-auto">{{ venue.email }}</span>
+            </p>
+            
+        </div>
+        <div class="flex items-center justify-center mt-12 mb-6 ">
+            <a href="{{ venue.get_absolute_url }}" class="py-2 px-6 border rounded-lg hover:rounded-none bg-gradient-to-r from-slate-400 to-slate-700 text-white hover:bg-gradient-to-r hover:from-slate-700 hover:to-slate-400 hover:shadow-md hover:shadow-white">More</a>
+        </div>
+    </div>
+                
+		
+	
+</div>
+   {% endfor %}
+</div>
+
+    
+    <script>
+        var map = L.map('map').setView([54.7023545, -3.2765753],5);  // Set the initial map view
+        
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+        }).addTo(map);
+        
+        // Iterate through your venues to add markers
+        {% for venue in venues %}
+            L.marker([{{ venue.latitude }}, {{ venue.longitude }}]).addTo(map)
+                .bindPopup('<a href="{{ venue.get_absolute_url }}">{{ venue.name }}</a>');  // Display venue name as a popup
+        {% endfor %}
+    </script>
+
+    
+{% if request.user.is_authenticated %}
+<a href="{% url 'venues:venue-create' %}">Create</a>
+{% endif %}
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded',  ()=> {
+        
+        const listViewBtn = document.getElementById('show-list-view');
+        const mapViewBtn  = document.getElementById('show-map-view');
+        const mapView     = document.getElementById('map-view');
+        const cardView    = document.getElementById('card-view');
+        cardView.classList.add('hidden')
+        
+        listViewBtn.addEventListener('click',  ()=> {
+          mapView.classList.add('hidden')
+          cardView.classList.remove('hidden')
+          cardView.classList.add('appear')
+          
+        });
+    
+
+        mapViewBtn.addEventListener('click', ()=> {
+            cardView.classList.add('hidden')
+            mapView.classList.remove('hidden')
+            mapView.classList.add('appear')
+        });
+    });
+    </script>
+{% endblock %}

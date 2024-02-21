@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class=" bg-gradient-to-r from-blue-500 to-blue-900">
+    <h1 class="text-3xl font-bold  text-center sm:text-5xl text-gray-50 rounded mt-12 my-6 mx-8">Committee Members</h1>
+    <div class="grid grid-cols-1 md:grid-cols-4 my-12 bg-gradient-to-r from-blue-500 to-blue-900">
+      
+
+     
+      {% for member in committee_members %}
+      <div class="flex justify-center  px-2 py-4">
+  
+      <section class="col-span-1 px-1 {% cycle 'aniShont' 'aniShont05' 'aniShunt' 'aniShunt05' %} ">
+    
+        <div class="bg-white shadow-xl rounded-lg mt-16 ">
+            <div class="flex justify-center">
+                <img alt="Member" src="{{ member.image.url }}" class=" h-32 w-32 shadow-2xl rounded-full align-middle border-none -mt-16 ">
+              
+            </div>
+            <div class="text-center mt-12">
+                <h3 class="text-xl font-semibold leading-normal mb-2 text-gray-700 ">
+                  {{ member.member_name }}
+                </h3>
+                <div class="text-sm leading-normal mt-0 mb-2 text-gray-400 font-bold uppercase">
+                  <i class=" mr-2 text-lg text-gray-400"></i>
+                  {% if member.position %}{{ member.position }}{% else %}{% endif %}
+                </div>
+              </div>
+              <div class="flex flex-wrap justify-center">
+                <div class="w-full px-4">
+                  <p class="mb-4 text-md leading-relaxed text-gray-700 smallText" data-id="{{ member.id }}">
+                    
+                   {{ member.description|truncatewords:40 }}
+
+                  </p>
+                  <p class="mb-4 text-lg leading-relaxed text-gray-700 hidden fullText" data-id="{{ member.id }}">
+                    
+                    {{ member.description }}
+                    
+                   </p>
+                   
+
+                   
+                  <button class="readMoreBtn text-xs text-gray-700 ">Read More</button>
+                </div>
+              </div>
+        </div>
+      </section>
+    </div> 
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const readMoreBtns = document.querySelectorAll('.readMoreBtn');
+    
+        readMoreBtns.forEach((btn) => {
+          btn.addEventListener('click', (event) => {
+            const dataId = btn.parentElement.querySelector('.smallText').getAttribute('data-id');
+            const smallText = document.querySelector(`.smallText[data-id="${dataId}"]`);
+            const fullText = document.querySelector(`.fullText[data-id="${dataId}"]`);
+    
+            if (fullText.classList.contains('hidden')) {
+              fullText.classList.remove('hidden');
+              fullText.classList.add('appear')
+              smallText.classList.add('hidden');
+              btn.textContent = 'Read Less'; // Change button text
+            } else {
+              
+              fullText.classList.add('disappear');
+              fullText.classList.add('hidden')
+              smallText.classList.remove('hidden');
+              
+              btn.textContent = 'Read More'; // Change button text
+            }
+          });
+        });
+      });
+    </script>
+    
+    
+     
+      {% endfor %}
+    </div>
+  </div>
+
+
+
+  {% endblock %}
+  

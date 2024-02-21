@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<section class=" text-gray-100">
+	<div class="max-w-sm sm:max-w-7xl mx-auto  ">
+		<h2 class="text-3xl font-bold text-center sm:text-5xl text-gray-50 my-12 ">CE Consortium UK</h2>
+		<div class="grid grid-cols-1 sm:grid-cols-2 ">
+				<div class="col-span-1  p-12 ">
+							<p class="mt-4 dark:text-gray-400">The CE Consortium was established in 2016 with the purpose of bringing together senior leaders in the field of CE across the UK. The main aim was to provide a forum where CE providers could work together on common issues, discuss challenges and solutions and share good practice.</p>
+							<p class="mt-4 dark:text-gray-400">The group is open to any senior leader working in the field of CE who wishes to be a part of the national CE agenda.</p>
+							<p class="mt-4 dark:text-gray-400 ">For more information please contact: Marie McCann</p>
+                                <div class="flex justify-center">
+                                    <a href="mailto:MMcCann@conductive-education.org.uk" class="px-6 py-2 border rounded-lg shadow-sm hover:shadow-xl hover:rounded-none my-12" >Send Mail</a>
+								</div>       
+			
+		</div>
+		<div class="col-span-1  flex justify-center items-center">
+			<img src="{% static 'img/consortium.jpg' %}" alt="Consortium" class="p-24 rounded-lg dark:bg-gray-500 ">
+		</div>
+	</div>
+</section>
+{% endblock %}

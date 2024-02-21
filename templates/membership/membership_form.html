@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="max-wsm sm:max-w-2xl mx-auto my-12">
+    <h1 class="p-6 text-center text-4xl my-12">How to join</h1>
+     <p class="my-12"><b> PCA membership for professionals requires an initial fee of £35 and annual renewal cost for continued membership of £30 each year.</b> This can be paid via cheque or bank transfer using the details given on completion of this application.</p>   
+   
+     <p class="my-12"><b>Free PCA membership for students currently studying Conductive Education.</b></p>
+    
+     <p class="my-12">Subscription period is from 1st November to 31st October each year.</p>
+    
+    
+      <section class=" flex justify-center bg-gray-50 rounded">
+       
+        <div class="border shadow-lg shadow-white rounded p-6 text-slate-700">
+       <form method="POST">
+        {% csrf_token %}
+        {{ form.as_div }}
+        <small class="inline font-bold w-full mb-12">I agree to the below use of my data in line with the PCA’s privacy policy.</small><br>
+        <small class="my-12 text-gray-500">
+            I agree to allow The Professional Conductors Association (UK) to contact me via emails and newsletters. I also consent to allow the Professional Conductors Association to contact me via the address or phone number provided on my application form. Emails may sometimes be sent using a host such as MailChimp. In these instances your data will be kept in a mailing list within an individual PCA account within the host’s website. This is only accessible to PCA Committee Members. Your data will never be sold or passed on to any third parties. Your data will only be accessible to the PCA committee members – who are voted for by you in line with the PCA’s constitutional guidelines (available on request).
+        </small>
+        <div class="flex justify-center my-6">
+            <button class="rounded w-1/4  my-4 bg-gradient-to-r from-gray-200 to-gray-300 hover:bg-gradient-to-r hover:from-gray-400 hover:to-gray-500  text-gray-600 p-1 outline outline-offset-2 outline-1 focus:outline-none focus:ring focus:ring-blue-400">submit</button>
+        </div>
+       </form>
+      </div>
+  </section>
+  </div>
+
+  <!-- <script>
+    const form = document.querySelector('form'); // Select your form element by its tag or ID, for example.
+    const inputElements = form.querySelectorAll('input') 
+    const selectElements = form.querySelectorAll('select');
+    const textareaElements = form.querySelectorAll('textarea');
+    const inputCheck = form.querySelector('input[type="checkbox"]');
+    // const inputDate = form.querySelector('input[type="date"]').setAttribute('type','date');
+
+   
+    inputElements.forEach((el)=>{
+        el.setAttribute('class', 'p-2 rounded-lg w-full my-4 shadow-sm shadow-white outline outline-2 outline-blue')
+    })
+    selectElements.forEach((el)=>{
+        el.setAttribute('class', 'p-2 rounded-lg w-full my-4 shadow-sm shadow-white outline outline-2 outline-blue')
+    })
+    textareaElements.forEach((el)=>{
+        el.setAttribute('class', 'p-2 rounded-lg w-full my-4 shadow-sm shadow-white outline outline-2 outline-blue')
+    })
+    inputCheck.setAttribute('class', '')
+    
+</script> -->
+{% endblock %}

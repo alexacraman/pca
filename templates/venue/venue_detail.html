@@ -1,0 +1,41 @@
+{% extends "base.html" %}  <!-- You can extend your base template here -->
+
+{% block content %}
+<div class="max-w-sm sm:max-w-4xl mx-auto">
+    <div class="bg-white text-gray-600 shadow-md rounded-lg overflow-hidden m-4">
+        <div class="p-4">
+            <h2 class="text-2xl font-semibold">{{ venue.name }}</h2>
+            <p class="text-gray-500">{{ venue.address }}</p>
+            
+            <div class="mt-4">
+                <h3 class="text-lg font-semibold">Description</h3>
+                <p class="text-gray-500">{{ venue.description }}</p>
+            </div>
+            
+            <div class="mt-4">
+                <h3 class="text-lg font-semibold">Contact Information</h3>
+                <p class="text-gray-500">Phone: {{ venue.phone }}</p>
+                <p class="text-gray-500">Email: {{ venue.email }}</p>
+                <p class="text-gray-500">Website: <a href="{{ venue.website }}" target="_blank">{{ venue.website }}</a></p>
+            </div>
+            
+            <div class="mt-4">
+                <h3 class="text-lg font-semibold">Location</h3>
+                <div id="map" class="h-64 w-full rounded-lg border"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% if request.user.is_authenticated %}
+    <a href="{% url 'venues:venue-update' venue.pk %}">Update</a>
+{% endif %}
+<script>
+// JavaScript to initialize the map with a marker
+var map = L.map('map').setView([{{ venue.latitude }}, {{ venue.longitude }}], 15);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+}).addTo(map);
+L.marker([{{ venue.latitude }}, {{ venue.longitude }}]).addTo(map)
+    .bindPopup('{{ venue.name }}');
+</script>
+{% endblock %}

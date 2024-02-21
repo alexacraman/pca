@@ -1,0 +1,100 @@
+[
+{
+    "model": "venues.venue",
+    "pk": 2,
+    "fields": {
+        "name": "Villa Real School",
+        "address": "Villa Real Road, Consett, County Durham, DH8 6BH, United Kingdom",
+        "description": "An education authority maintained SEN school catering for 2-19yr old students. We currently have 2 Teacher Conductors and 2 conductors working across the range of ages.",
+        "phone": "01207503651",
+        "email": "n.fitzpatrick300@durhamlearning.net",
+        "website": "http://www.villarealschool.co.uk",
+        "latitude": "54.8596536968615000",
+        "longitude": "-1.8212338924521800"
+    }
+},
+{
+    "model": "venues.venue",
+    "pk": 3,
+    "fields": {
+        "name": "The Rainbow Centre for Conductive Education",
+        "address": "Palmerston Drive ,The Bradbury Building ,Fareham, Hampshire, PO14 1BJ, United Kingdom",
+        "description": "We have been providing Conductive Education to children with Cerebral Palsy since 1990 and since 2007 we also offer specializied services for adults with motor disorders.",
+        "phone": "01329 289 500",
+        "email": "enquiries@rainbowcentre.org",
+        "website": "http://www.rainbowcentre.org",
+        "latitude": "50.8450519787458000",
+        "longitude": "-1.1917323343476000"
+    }
+},
+{
+    "model": "venues.venue",
+    "pk": 4,
+    "fields": {
+        "name": "The Pace Centre",
+        "address": "Coventon Road, Aylesbury, Buckinghamshire, HP19 9JL, United Kingdom",
+        "description": "The PACE Centre is a UK-registered charity and special school based in Aylesbury, Buckinghamshire, UK. It helps children and young people with motor disorders, such as cerebral palsy through a transdisciplinary approach. The teams include Physio Therapists, Occupational Therapists, Speech and Language therapists, Conductord, Teachers, Specialised LSAs and LSAs.",
+        "phone": "01296392739",
+        "email": "info@thepacecentre.org",
+        "website": "https://thepacecentre.org/",
+        "latitude": "51.8258706167994000",
+        "longitude": "-0.8270530730165500"
+    }
+},
+{
+    "model": "venues.venue",
+    "pk": 5,
+    "fields": {
+        "name": "Stick ‘n’ Step",
+        "address": "3 Croxteth Avenue, Wallasey, Merseyside, CH44 5UL, United Kingdom",
+        "description": "Stick 'n' Step works with children and young people with cerebral palsy, and their families, from all across North West England and North Wales.\r\nThe organisation was formed in 2002 by a group of parents of children and young people who have cerebral palsy. Stick 'n' Step was established to provide free conductive education sessions to children and young people from across North West England and North Wales.The organisation is a registered charity and employs a team of professionals to deliver excellent conductive education sessions, as well as delivering the highest standards of supporting administration, management and fundraising.The organisation is completely independent and receives all of its funding from the generosity of local people, communities, businesses and grant making trusts. We work with 72 children and families on a weekly basis during term time and it costs in the region of £4,500 per child per year to offer our services.",
+        "phone": "01516380888",
+        "email": "info@sticknstep.org",
+        "website": "https://www.sticknstep.org/",
+        "latitude": "53.4272451119319000",
+        "longitude": "-3.0420516258705500"
+    }
+},
+{
+    "model": "venues.venue",
+    "pk": 6,
+    "fields": {
+        "name": "Steps Conductive Education Centre",
+        "address": "40 Loughborough Road, Shepshed, Loughborough, Leicestershire, LE12 9DN, United Kingdom",
+        "description": "Steps is a registered National Charity supporting families with children who have special educational needs. We offer a free and unique service following the principles of Conductive Education for children with conditions that cause motor impairments or motor development delays. Steps caters for young children with Cerebral Palsy, chromosome disorders including Down Syndrome or other conditions which affect the acquisition of motor skills.\r\n\r\nOur goal is to develop the skills the children need to progress and maximize their potential. At the same time, we provide parents with the knowledge, confidence, and resilience they need to understand how they can enhance the development of their child.\r\n\r\nSteps sessions are based on the principles of Conductive Education and follow the Early Years Foundation Stage Curriculum. This Early Intervention is carefully planned for small groups of children and their parents. Our professional team encourages and motivates the parent and child groups through a structured programme, designed to help each child achieve individualised developmental steps. Within each group session, children work through a series of stimulating and challenging tasks addressing every aspect of a young child's development; physical, social, cognitive, communicative and emotional, focusing on the whole personality. The children are encouraged to take an active part in their learning, planning and solving problems for themselves.\r\n\r\nImportantly, parents work with their children ensuring that the skills learnt at Steps can be transferred to their everyday home life. Achievable individual goals are set and updated regularly for each child.\r\n\r\nOur older and advanced groups work without the parents being present to promote maximum independence and to boost physical and problem-solving skills in preparation for full or part time integration into mainstream or other schools. The Centre runs 'Gym Club' groups once a week for children who have reached statutory school age. The Gym Club aims to provide ongoing support by further improving skills that can be used and applied elsewhere thus complimenting education in other settings.\r\n\r\nThe Steps team offers vital support to hundreds of families, working with children to help them learn and grow by offering consistent kindness, guidance and support to parents and extended families. The team's help during the difficult early years of a child's diagnosis is a lifeline for countless families who access services at Steps.\r\n\r\nOur groups\r\nSteps offers different groups during the week which are organised to suit the specific needs of a particular age and ability. In addition to working as part of a group, each child has an individual programme designed to address their personal needs. We also offer Gym Club one afternoon a week for children who are in mainstream education.\r\n\r\nOur Team\r\nTrish Mabbott - Fundraising and Operations Manager\r\nIndila Simandi - Team Leader, Lead Conductor\r\nFiona Holroyd - Conductor\r\nMariann Taylor - Conductor\r\nReka Simandi- Trainee Conductor and Media Assistant\r\nJanet Russell  - Centre and Volunteer Manager\r\nKaty Widdowson - Marketing and Communications Manager\r\nSally Belton - Administrative Assistant\r\nAngie Higgins - Finance Officer\r\n, -1.2908762925433308",
+        "phone": "01509 506878",
+        "email": "info@stepscentre.org.uk",
+        "website": "http://www.stepscentre.org.uk",
+        "latitude": "52.8429654794769000",
+        "longitude": "-1.2908762925433300"
+    }
+},
+{
+    "model": "venues.venue",
+    "pk": 7,
+    "fields": {
+        "name": "Step and Learn Charity",
+        "address": "37 Frindsbury Road, Strood, Kent, ME2 4JA, United Kingdom",
+        "description": "Step and Learn offers free Conductive Education sessions for children with Cerebral Palsy, Global Developmental Delay and other disorders. Our aim, like Andras Peto, the Hungarian founder of CE, is to view the child holistically, believing in the theory that motor disabled children learn in the same way as their peers. We teach our children how to control their physical movements, educating and motivate them through play to become active participants throughout their daily lives.\r\n\r\nStep and Learn promotes a setting that is fun, active, stimulating and diverse. All children are engaged in activities which aim to bring out their full potential.\r\n\r\nThe group plays an important part in the development of the personality and social skills of the child. Children and their parents learn, support and encourage each other. Equally important is that every child and parent within the group receives individual attention. With the leadership and advice of a conductor, the parents and carers gain a greater understanding of developmental delay and how it may affect their child's ability to achieve.\r\n\r\nTo attend our sessions all you need to do is contact our team on 01634 787951 to book an assessment, which will enable the team to determine the appropriate programmes needed to aid the child to reach their full potential.",
+        "phone": "01634787951",
+        "email": "info@stepandlearn.org",
+        "website": "http://stepandlearn.org/",
+        "latitude": "51.4008446853758000",
+        "longitude": "0.4994221374628550"
+    }
+},
+{
+    "model": "venues.venue",
+    "pk": 8,
+    "fields": {
+        "name": "Small Steps SFP",
+        "address": "17-19 Worple Way, Richmond, London, TW10 6DG, United Kingdom",
+        "description": "Small Steps was established as a School for Parents in 1998 and is based in Richmond, in South West London.  At Small Steps we work with children from birth to 5 years using the principles of Conductive Education.\r\n\r\nChildren attend a group session at Small Steps once per week with a parent or carer. There are up to 6 children per group who are all working on similar skills. A team of teachers, conductors and physiotherapists lead the parent/ child team through a structured programme designed to help each child achieve the next developmental steps.\r\n\r\n, -0.2959156412196296",
+        "phone": "02087045935",
+        "email": "info@smallsteps.org.uk",
+        "website": "http://www.smallsteps.org.uk",
+        "latitude": "51.4618829023030000",
+        "longitude": "-0.2959156412196300"
+    }
+}
+]

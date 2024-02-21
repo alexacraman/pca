@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class=" max-w-sm  mx-auto p-6 rounded-md sm:p-10 bg-blue-900 text-gray-100 m-6">
+		<div class="mx-auto p-6">
+      <h1 class=" text-center text-3xl font-bold mb-8">Login</h1>
+      <form  method="POST" autocomplete="off" class="form">
+        {% csrf_token %}
+        {{ form }}
+        
+        <div class="">
+          <input type="checkbox" id="showPassword"  style="width: auto; height: auto;" />
+          <label for="showPassword" >view password</label>
+        </div>
+        
+        <input type="hidden" name="next" value="{{ next }}" />
+        <div class="flex my-12 justify-center">
+          <button type="submit" value="Login" class="px-6 py-2 border rounded-lg shadow-sm hover:shadow-xl hover:rounded-none" >Log in</button>
+        </div>
+      </form>
+      {% if form.errors %}
+      <p class="text-red-500 text-xs">Your email and password didn't match. Please try again.</p>
+    {% endif %}
+  </div>
+</div>
+
+{% endblock %}

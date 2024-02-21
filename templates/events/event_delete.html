@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="max-w-sm sm:max-w-md mx-auto rounded overflow-hidden shadow-lg bg-white text-slate-900 m-4">
+   <div class="text-center text-2xl p-6">
+    Are you sure you want to delete {{ object.title }}?
+    <form  method="POST" class="text-lg">
+        {% csrf_token %}
+        {{ form.as_div }}
+        <div class="flex justify-center my-12">
+            <input type="submit" class="mx-auto cursor-pointer lg:mx-0 hover:bg-gradient-to-r hover:from-red-900 hover:to-red-500 bg-gradient-to-r from-red-500 to-red-900 text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg" >
+        </div>
+    </form>
+   </div>
+    
+</div>
+{% endblock %}
